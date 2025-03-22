@@ -72,3 +72,6 @@ function generateTimezoneData() {
 	}, {});
 	writeFileSync(path.resolve(ROOT_DIR, 'dist/timezones.json'), JSON.stringify({ data }));
 }
+
+// 👉 Add this line to generate node schemas for the UI
+await shell.exec('npx n8n build');
